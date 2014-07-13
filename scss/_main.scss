@@ -38,30 +38,30 @@ body {
 	&.active {
 		opacity: 1;
 	}
-	
+
 	// Info for previous slide
 	&.info {text-align:center;}
 }
 
 .demo {
-	min-width:1000px;
+	min-width: 1000px;
+}
 
-	&.code {
-		pre,
-		iframe {
-			width:50%;
-			float:left;
-		}
-		pre {
-			margin: 0;
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-			min-height: 600px;
-		}
-		iframe {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
+.split {
+	.left,
+	.right {
+		margin: 0;
+		width:50%;
+		float:left;
+		min-height: 600px;
+	}
+	.left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.right {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }
 
