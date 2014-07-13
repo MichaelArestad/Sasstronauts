@@ -15,7 +15,8 @@ $medium-gray: #d2dee6;
 $dark-gray: #324155;
 
 // Secondary Grays
-$white: #fff;
+//$white: #fff;
+$white:lighten(#17212D, 73%);
 $groups-bg: lighten($light-blue, 30%);
 // $text-gray: tint($dark-gray, 50%);
 

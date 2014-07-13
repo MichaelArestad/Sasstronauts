@@ -5,7 +5,7 @@
 
 body {
 	position:relative;
-	color: #fff;
+	color: $white;
 	height: 100%;
 	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 	overflow: hidden;
@@ -24,7 +24,7 @@ body {
 	transition: all 333ms ease-in-out;
 	span {
 		font-size:0.8em;
-		color:#fff;
+		color:$white;
 	}
 	&:hover {opacity:1;}
 }
@@ -68,13 +68,13 @@ body {
 	h1 {
 		font-size:1.6em;
 		margin-top:0.2em;
-		text-shadow:2px 2px 0 #0A0C12, 0 0 20px lighten(#17212D, 25%);
+		text-shadow:2px 2px 0 #0A0C12, 0 0 20px darken($white, 25%);
 
 		&:after {
 			content:'';
 			height:0.1em;
 			width:10%;
-			background:#D1DBE7;
+			background:$white;
 			position: absolute;
 			bottom: -20%;
 			left: 45%;
@@ -92,8 +92,6 @@ body {
 		margin-bottom:0.4em;
 		span {
 			font-size:1.2em;
-			//color:#fff;
-			//opacity:0.1;
 			margin-right:0.5em;
 			top:0.15em;
 		}
@@ -104,13 +102,12 @@ body {
 // iframes
 iframe {
 	width: 100%;
-	height: 80vh;
+	height: 80vh; // Need Fallback
 }
 
 
 
 // Nyan animation after 5 minutes
-
 #nyan {
 	position: absolute;
 	top: 630px;
