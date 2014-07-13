@@ -7,9 +7,10 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f2;
+	color: #d08770;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: $monospace;
+	font-size: 24px;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -31,6 +32,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	background: #000;
 	background: rgba(0,0,0,0.3);
+	box-shadow: 0 0 22px rgba(45, 97, 114, 0.1);
 }
 
 /* Inline code */
@@ -39,70 +41,61 @@ pre[class*="language-"] {
 	border-radius: .3em;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: slategray;
-}
-
-.token.punctuation {
-	color: #f8f8f2;
-}
-
 .namespace {
 	opacity: .7;
 }
 
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol {
-	color: #f92672;
-}
+.token {
+	$white: #c0c5ce;
+	$orange: #d08770;
+	$blue: #6097b6;
+	$magenta: #dd3786;
 
-.token.boolean,
-.token.number{
-	color: #ae81ff;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.builtin {
-	color: $fire-orange;
-}
-
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value
-{
-	color: #e6db74;
-}
-
-
-.token.keyword{
-color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
-}
-
-.token.important {
-	font-weight: bold;
-}
-
-.token.entity {
-	cursor: help;
+	&.comment,
+	&.prolog,
+	&.doctype,
+	&.cdata {
+		color: slategray;
+	}
+	&.property,
+	&.punctuation,
+	&.constant,
+	&.tag,
+	&.symbol {
+		color: $white !important;
+	}
+	&.variable {
+		color: $orange;
+	}
+	&.keyword {
+		color: $blue;
+	}
+	&.boolean,
+	&.number{
+		color: #ae81ff;
+	}
+	&.selector,
+	&.attr-name,
+	&.string,
+	&.builtin {
+		color: #d08770;
+	}
+	&.operator,
+	&.entity,
+	&.url,
+	.language-css &.string,
+	.style &.string,
+	&.variable {
+		color: #f8f8f2;
+	}
+	&.atrule,
+	&.attr-value {
+		color: #e6db74;
+	}
+	&.important {
+		color: $magenta;
+	}
+	&.entity {
+		cursor: help;
+	}
 }
