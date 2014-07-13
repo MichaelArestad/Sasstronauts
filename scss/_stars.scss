@@ -1,0 +1,111 @@
+// Borrowed from http://codepen.io/saransh/pen/BKJun
+// Thank You :)
+
+$base-speed:150s;
+
+$size:2000px;
+$size-simple:2000;
+
+$offset:1px;
+
+
+// n is number of stars required
+@function multiple-box-shadow($n) {
+  $value: "#{random($size-simple)}px #{random($size-simple)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random($size-simple)}px #{random($size-simple)}px #FFF";
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+
+@mixin starry($multiple) {
+ width: ($offset * $multiple);
+ height: ($offset * $multiple);
+ background: transparent;
+ box-shadow: $shadows-small;
+ animation: animStar ($base-speed * $multiple) linear infinite;
+ &:after {
+   content: " ";
+   position: absolute;
+   top: $size;
+   width: ($offset * $multiple);
+   height: ($offset * $multiple);
+   background: transparent;
+   box-shadow: $shadows-small;
+ }
+}
+
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+#stars {
+ @include starry(1);
+  //width: $offset;
+  //height: $offset;
+  //background: transparent;
+  //box-shadow: $shadows-small;
+  //animation: animStar $base-speed linear infinite;
+  //&:after {
+  //  content: " ";
+  //  position: absolute;
+  //  top: $size;
+  //  width: $offset;
+  //  height: $offset;
+  //  background: transparent;
+  //  box-shadow: $shadows-small;
+  //}
+}
+
+#stars2 {
+ @include starry(2);
+ //width: $offset * 2;
+ //height: $offset * 2;
+ //background: transparent;
+ //box-shadow: $shadows-small;
+ //animation: animStar ($base-speed * 2) linear infinite;
+ //&:after {
+ //  content: " ";
+ //  position: absolute;
+ //  top: $size;
+ //  width: $offset * 2;
+ //  height: $offset * 2;
+ //  background: transparent;
+ //  box-shadow: $shadows-small;
+ //}
+}
+
+#stars3 {
+ @include starry(3);
+ //width: $offset * 3;
+ //height: $offset * 3;
+ //background: transparent;
+ //box-shadow: $shadows-small;
+ //animation: animStar ($base-speed * 3) linear infinite;
+ //&:after {
+ //  content: " ";
+ //  position: absolute;
+ //  top: $size;
+ //  width: $offset * 3;
+ //  height: $offset * 3;
+ //  background: transparent;
+ //  box-shadow: $shadows-small;
+ //}
+}
+
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}

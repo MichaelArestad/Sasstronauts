@@ -423,10 +423,26 @@ th { font-weight: 700; }
 .clear:before, .clear:after { content: ""; display: table; }
 .clear:after { clear: both; }
 
-body { position: relative; color: #fff; background: #000; }
-body:after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -1; opacity: 0.25; background-image: url("../_assets/images/universe-2.jpg"); -webkit-background-size: cover; background-size: cover; }
+body { position: relative; color: #fff; }
 
 .step { min-width: 700px; font-size: 3em; opacity: .3; -webkit-transition: all 1.2s ease-in-out; transition: all 1.2s ease-in-out; }
 .step.active { opacity: 1; }
+
+html { height: 100%; background: -webkit-radial-gradient(bottom, ellipse, #1b2735 0%, #090a0f 100%); background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); overflow: hidden; }
+
+#stars { width: 1px; height: 1px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); -webkit-animation: animStar 150s linear infinite; animation: animStar 150s linear infinite; }
+#stars:after { content: " "; position: absolute; top: 2000px; width: 1px; height: 1px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); }
+
+#stars2 { width: 2px; height: 2px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); -webkit-animation: animStar 300s linear infinite; animation: animStar 300s linear infinite; }
+#stars2:after { content: " "; position: absolute; top: 2000px; width: 2px; height: 2px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); }
+
+#stars3 { width: 3px; height: 3px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); -webkit-animation: animStar 450s linear infinite; animation: animStar 450s linear infinite; }
+#stars3:after { content: " "; position: absolute; top: 2000px; width: 3px; height: 3px; background: transparent; -webkit-box-shadow: multiple-box-shadow(700); box-shadow: multiple-box-shadow(700); }
+
+@-webkit-keyframes animStar { from { -webkit-transform: translateY(0px); transform: translateY(0px); }
+  to { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); } }
+
+@keyframes animStar { from { -webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); }
+  to { -webkit-transform: translateY(-2000px); -ms-transform: translateY(-2000px); transform: translateY(-2000px); } }
 
 /*# sourceMappingURL=sasstronauts.css.map */
