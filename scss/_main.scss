@@ -70,7 +70,17 @@ body {
 	}
 }
 
+
+// iframes
+iframe {
+	width: 100%;
+	height: 80vh;
+}
+
+
+
 // Nyan animation after 5 minutes
+
 #nyan {
 	position: absolute;
 	top: 630px;
