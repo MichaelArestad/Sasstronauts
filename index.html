@@ -115,7 +115,7 @@
     it can be found later, when `hint` element is being described.
 
 -->
-<body class="impress-not-supported">
+<body class="impress-not-supported language-scss">
 
 <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
@@ -229,6 +229,25 @@
         <pre><code>blah blah </code></pre>
         <iframe src="demos/demo1.html"></iframe>
     </div>
+
+    <div id="test" class="step" data-x="-3000" data-y="4300" data-rotate="60">
+        <pre><code>.nyan { position:absolute; }
+.test {
+    top: 3px;
+    &amp; i {
+        background: $blue;
+    }
+}
+body {
+    background: red;
+}
+@for $i from $start through $end {
+    some {
+        background: $i;
+    }
+}</code></pre>
+    </div>
+
     <!-- Syntax yo face off! -->
 
     <!--
@@ -390,6 +409,7 @@ if ("ontouchstart" in document.documentElement) {
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
 
 -->
+<script src="js/prism.js" type="text/javascript"></script>
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
 
