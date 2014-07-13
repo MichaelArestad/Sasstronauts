@@ -421,4 +421,6 @@ th { font-weight: 700; }
 
 body { color: #fff; background: #000; }
 
+.step { min-width: 600px; font-size: 3em; }
+
 /*# sourceMappingURL=sasstronauts.css.map */
