@@ -15,11 +15,23 @@ body {
 	z-index: 2;
 }
 
+.home {
+	position:fixed;
+	top:0.5em;
+	right:0.5em;
+	opacity:0.1;
+	transition: all 333ms ease-in-out;
+	span {
+		font-size:0.8em;
+		color:#fff;
+	}
+	&:hover {opacity:1;}
+}
 
 // Slides
 .step {
 	min-width: 700px;
-	opacity: .3;
+	opacity: .05;
 	transition: all 1.2s ease-in-out;
 
 	&.active {
