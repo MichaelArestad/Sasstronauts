@@ -1,0 +1,26 @@
+// ==========================================================================
+// Stars mixins
+// ==========================================================================
+
+@mixin starry($multiple, $shadow) {
+	width: (map-get($stars, offset) * $multiple);
+	height: (map-get($stars, offset) * $multiple);
+	animation: animStar (map-get($stars, speed) * $multiple) linear infinite;
+	@extend %stars;
+
+	&,
+	&:after {
+		@if($shadow == "small") {
+			box-shadow: multiple-box-shadow(700);
+		} @else if ($shadow == "medium") {
+			box-shadow: multiple-box-shadow(200);
+		} @else if ($shadow == "large") {
+			box-shadow: multiple-box-shadow(100);
+		}
+	}
+	&:after {
+		top: (map-get($stars, size) * 1px * $multiple);
+		width: (map-get($stars, offset) * $multiple);
+		height: (map-get($stars, offset) * $multiple);
+	}
+}

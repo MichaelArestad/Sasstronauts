@@ -1,0 +1,14 @@
+// ==========================================================================
+// Stars extends
+// ==========================================================================
+
+%stars {
+	border-radius:50%;
+	background: transparent;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: transparent;
+	}
+}

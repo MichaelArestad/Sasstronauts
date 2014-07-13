@@ -1,0 +1,13 @@
+// ==========================================================================
+// Stars functions
+// ==========================================================================
+
+@function multiple-box-shadow($n) {
+	$value: "#{random(map-get($stars, size))}px #{random(map-get($stars, size))}px #{map-get($stars, color)}";
+
+	@for $i from 2 through $n {
+		$value: "#{$value} , #{random(map-get($stars, size))}px #{random(map-get($stars, size))}px #{map-get($stars, color)}";
+	}
+
+	@return unquote($value);
+}
