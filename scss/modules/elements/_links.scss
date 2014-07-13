@@ -7,11 +7,6 @@ a {
 	transition: color .2s;
 	text-decoration: none;
 
-	&.internal {
-		color:#fff;
-		&:visited {color:white;}
-	}
-
 	&:visited {
 		color: map-get($link-color, color--visited);
 	}
@@ -22,4 +17,22 @@ a {
 	&:focus {
 		outline: thin dotted;
 	}
+
+	&.internal {
+		color:#fff;
+		span {
+			float:right;
+			color:$fire-orange;
+			font-size:1.5em;
+			top:-0.05em;
+			opacity:0;
+			transition:all 333ms ease-in-out;
+		}
+		&:visited {color:white;}
+		&:hover {
+			color:$fire-orange;
+			span {opacity:1;}
+		}
+	}
+
 }
