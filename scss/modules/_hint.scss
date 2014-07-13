@@ -8,8 +8,11 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	font-size: em(10);
+	font-weight: 600;
 	text-align: center;
-	font-size: 14;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	z-index: 100;
 	opacity: 0;
 	transform: translateY(400px);
