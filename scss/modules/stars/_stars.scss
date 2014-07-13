@@ -10,14 +10,10 @@
 @import "mixins";
 @import "extends";
 
-#stars {
-	@include starry(1, small);
-}
-#stars2 {
-	@include starry(2, medium);
-}
-#stars3 {
-	@include starry(3, large);
+@for $i from 1 through 3 {
+	#stars-#{$i} {
+		@include starry($i,$i);
+	}
 }
 
 @keyframes animStar {

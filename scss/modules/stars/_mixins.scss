@@ -10,11 +10,11 @@
 
 	&,
 	&:after {
-		@if($shadow == "small") {
+		@if($shadow == 1) {
 			box-shadow: multiple-box-shadow(700);
-		} @else if ($shadow == "medium") {
+		} @else if ($shadow == 2) {
 			box-shadow: multiple-box-shadow(200);
-		} @else if ($shadow == "large") {
+		} @else if ($shadow == 3) {
 			box-shadow: multiple-box-shadow(100);
 		}
 	}
