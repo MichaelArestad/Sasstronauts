@@ -1,0 +1,25 @@
+// ==========================================================================
+// Controls hint styling
+// ==========================================================================
+
+.hint {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	font-size: 14;
+	z-index: 100;
+	opacity: 0;
+	transform: translateY(400px);
+	transition: opacity 1.3s 1s, transform 1s 1s;
+
+	.impress-enabled & {
+		display: block;
+	}
+	.impress-on-sasstronauts & {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
