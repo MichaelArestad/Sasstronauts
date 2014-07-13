@@ -4,22 +4,36 @@
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
+	padding: 0;
 }
 ul {
-	list-style: disc;
+	list-style: none;
 }
 ol {
 	list-style: decimal;
-}
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
 }
 dt {
 	font-weight: $bold;
 }
 dd {
 	margin: 0 1.5em 1.5em;
+}
+li {
+	margin: em(5);
+	opacity: 0;
+	transition: all .4s 0 ease-in-out;
+
+	.active & {
+		opacity: 1;
+
+		$start: 1;
+		$end: 8;
+
+		@for $i from $start through $end {
+			&:nth-child(#{$i}) {
+				transition: all .4s ($i * .4s + 1) ease-in-out;
+			}
+		}
+	}
 }
