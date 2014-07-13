@@ -8,12 +8,13 @@ $size-simple:2000;
 
 $offset:1px;
 
+$star-color:lighten(#1B2735, 15%);
 
 // n is number of stars required
 @function multiple-box-shadow($n) {
-  $value: "#{random($size-simple)}px #{random($size-simple)}px #FFF";
+  $value: "#{random($size-simple)}px #{random($size-simple)}px #{$star-color}";
   @for $i from 2 through $n {
-    $value: "#{$value} , #{random($size-simple)}px #{random($size-simple)}px #FFF";
+    $value: "#{$value} , #{random($size-simple)}px #{random($size-simple)}px #{$star-color}";
   }
   @return unquote($value);
 }
@@ -26,6 +27,7 @@ $shadows-big: multiple-box-shadow(100);
 @mixin starry($multiple, $shadow) {
  width: ($offset * $multiple);
  height: ($offset * $multiple);
+ border-radius:50%;
  background: transparent;
  @if($shadow == "small") {
   box-shadow: $shadows-small;
