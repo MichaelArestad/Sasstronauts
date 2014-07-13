@@ -18,8 +18,8 @@ a {
 		outline: thin dotted;
 	}
 
-	&.internal {
-		color:#fff;
+	&.anchor {
+		color:$white;
 		span {
 			float:right;
 			color:$fire-orange;
@@ -28,7 +28,7 @@ a {
 			opacity:0;
 			transition:all 333ms ease-in-out;
 		}
-		&:visited {color:white;}
+		&:visited {color:$white;}
 		&:hover {
 			color:$fire-orange;
 			span {opacity:1;}
