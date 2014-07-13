@@ -412,6 +412,9 @@ table { margin: 0 0 1.5em; width: 100%; }
 
 th { font-weight: 700; }
 
+.fallback-message { margin: 20px auto; padding: 0 20px; max-width: 780px; border: 4px solid #ffe81f; border-radius: 17px; color: #ffe81f; }
+.impress-supported .fallback-message { display: none; }
+
 @-webkit-keyframes grow { 0% { -webkit-transform: scale(0.3); transform: scale(0.3); }
   60% { -webkit-transform: scale(1.15); transform: scale(1.15); }
   100% { -webkit-transform: scale(1); transform: scale(1); } }
@@ -476,65 +479,6 @@ button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button
 .clear:before, .clear:after { content: ""; display: table; }
 .clear:after { clear: both; }
 
-body { background: #f9f9f9; }
-
-header { background: #222; height: 33px; left: 0; right: 0; overflow: hidden; position: fixed; top: 0; z-index: 5; }
-header .genericon { color: #999; font-size: 24px; height: 24px; margin: 4px 0 0 6px; width: 24px; }
-header .progress { color: #bbb; position: absolute; top: 0; right: 6px; }
-header .progress li { background: #555; display: inline-block; height: 12px; list-style: none; margin: 10px 4px 0 0; width: 12px; border-radius: 1px; }
-header .progress li.done { background: #93d07b; }
-header .progress span { float: left; margin: 6px 12px 0 0; }
-header .progress ul { float: left; margin: 0; padding: 0; }
-
-.step { margin: 33px 0 0; }
-.step h1 { font: 300 2.5em/1.4 'Open Sans', Helvetica, sans-serif; }
-@media (max-width: 500px) { .step h1 { font-size: 1.875em; } }
-
-.container { overflow: hidden; }
-
-.section-header { margin: 0 auto; padding: 3% 30px; max-width: 650px; text-align: center; }
-
-.skip { color: #999; text-align: center; }
-.skip a { color: #999; text-decoration: underline; }
-.skip a:hover { text-decoration: none; }
-
-.step-description { color: #666; margin: -13px 0 1.83333em; padding: 0; font-size: 1.125em; line-height: 1.6; }
-@media (max-width: 500px) { .step-description { font-size: 1em; } }
-
-.med-icon { float: left; font-size: 23px; margin: 11px 9px 0 0; }
-
-.step1 section.step-1, .step2 section.step-2, .step3 section.step-3, .step4 section.step-4 { display: block; }
-
-.options-box { background: #eee; margin-bottom: 33px; overflow: hidden; padding: 2%; }
-.options-box .option { background: #fff; border: 4px solid #e8e8e8; color: #999; float: left; font-size: 18px; margin: 1.5%; padding: 23px; position: relative; text-align: center; width: 30%; border-radius: 3px; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; z-index: 1; }
-.options-box .option:hover, .options-box .option.active { background: #eef5fb; border: 4px solid #00aadc; color: #333; }
-.options-box .option span.big-icon { display: block; font-size: 43px; margin-bottom: 13px; }
-.options-box .social-link { float: left; font-size: 18px; margin: 1.6% 2%; padding: 13px 18px; position: relative; text-align: center; width: 46%; border-radius: 3px; z-index: 1; }
-.options-box .social-link.fb { background: #485ea0; }
-.options-box .social-link.tw { background: #51a4e4; }
-.options-box .social-link.connected { background: #73c650 !important; }
-.options-box .social-link .bg { background: #fff; }
-.options-box .social-link .fa { color: #fff; float: left; font-size: 23px; margin: 2px 8px 0 0; }
-.options-box .social-link .title { color: #fff; }
-.options-box .social-link .wrap { display: block; position: relative; }
-.options-box .social-assurance { clear: both; color: #666; padding: 4px; text-align: center; }
-.options-box .social-assurance strong { color: #000; }
-
-@media (max-width: 990px) { section .container .options-box .option { font-size: 16px; white-space: nowrap; } }
-@media (max-width: 768px) { section .container .options-box .option { width: 46%; } }
-@media (max-width: 530px) { section .container .options-box .option { width: 95%; } }
-.jetpack-login { background: #f6f6f6; border: 1px solid #eee; margin-bottom: 33px; padding: 23px 0; text-align: center; }
-.jetpack-login a { color: #999; text-decoration: underline; }
-.jetpack-login a:hover { text-decoration: none; }
-
-.jetpack-signup { background: #eee; }
-.jetpack-signup input[type="text"] { background: #fff; border-color: #ddd; margin: 6px 0 23px; }
-.jetpack-signup label { font-weight: bold; }
-
-.login .signing-up { display: none; }
-.login .logging-in { display: inline-block; }
-
-.signup .signing-up { display: inline-block; }
-.signup .logging-in { display: none; }
+body { background: #000; }
 
 /*# sourceMappingURL=sasstronauts.css.map */
