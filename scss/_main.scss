@@ -38,6 +38,9 @@ body {
 	&.active {
 		opacity: 1;
 	}
+	
+	// Info for previous slide
+	&.info {text-align:center;}
 }
 
 .demo {
@@ -60,9 +63,6 @@ body {
 			border-bottom-left-radius: 0;
 		}
 	}
-
-	// Info for previous slide
-	&.info {text-align:center;}
 }
 
 #sasstronauts {
