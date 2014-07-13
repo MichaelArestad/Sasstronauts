@@ -60,17 +60,18 @@ body {
 
 #nyan {
 	position: absolute;
-	top: 430px;
+	top: 630px;
 	right: 100%;
 	width: 350px;
 	height: 160px;
 	background: url(../_assets/gifs/nyan.gif) no-repeat;
 	background-size: 350px 160px;
 	animation: nyan 15s 300s linear;
+	transform: rotate(-14.04deg);
 }
 
 @keyframes nyan {
 	100% {
-		transform: translateX(2000px);
+		transform: translate(2000px, -500px) rotate(-14.04deg);
 	}
 }
