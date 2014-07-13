@@ -39,6 +39,14 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false,
 				}
+			},
+			html: {
+				files: ['index.html'],
+				// tasks: [''],
+				options: {
+					livereload: true,
+					spawn: false,
+				}
 			}
 		}
 	});
