@@ -25,6 +25,18 @@ body {
 	&.active {
 		opacity: 1;
 	}
+
+	// Demo slides
+	&.demo {min-width:1000px;}
+
+	// Slides with demos and code
+	&.demo.code {
+		pre, iframe {
+			width:48%;
+			float:left;
+		}
+		pre {margin:0 2% 0 0;}
+	}
 }
 
 #sasstronauts {
