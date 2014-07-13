@@ -13,4 +13,10 @@ body {
 .step {
 	min-width: 600px;
 	font-size:3em;
+	opacity: .3;
+	transition: all 1.2s ease-in-out;
+
+	&.active {
+		opacity: 1;
+	}
 }

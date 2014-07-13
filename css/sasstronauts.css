@@ -425,6 +425,7 @@ th { font-weight: 700; }
 
 body { color: #fff; background: #000; }
 
-.step { min-width: 600px; font-size: 3em; }
+.step { min-width: 600px; font-size: 3em; opacity: .3; -webkit-transition: all 1.2s ease-in-out; transition: all 1.2s ease-in-out; }
+.step.active { opacity: 1; }
 
 /*# sourceMappingURL=sasstronauts.css.map */
