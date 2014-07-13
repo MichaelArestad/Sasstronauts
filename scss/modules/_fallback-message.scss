@@ -9,8 +9,8 @@
 	border: 4px solid #ffe81f;
 	border-radius: 17px;
 	color: #ffe81f;
+}
 
-	.impress-supported & {
-		display: none;
-	}
+body:not(.impress-supported) .fallback-message {
+	display: block !important;
 }
