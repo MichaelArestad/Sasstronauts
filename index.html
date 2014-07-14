@@ -261,7 +261,19 @@
 
     <!-- iFrame Demo w/ Code -->
     <div id="iframedemo" class="step demo split" data-x="3000" data-y="4300" data-rotate="60">
-        <pre class="left"><code>blah blah </code></pre>
+        <pre class="left"><code>$buttons: (
+ color: blue,
+ height: 20px,
+ width: 40px
+);
+%button {
+ color: map-get($buttons, color);
+ height: map-get($buttons, height);
+ width: map-get($buttons, width);
+}
+.foo {
+ @extend %button;
+}</code></pre>
         <iframe class="right" src="demos/demo1.html"></iframe>
     </div>
 
