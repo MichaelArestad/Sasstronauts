@@ -13,13 +13,13 @@ desktop: 960px,
 );
 
 @mixin breakpoint($size){
-@each $breakpoint, $value in $breakpoints {
- @if $size == $breakpoint {
- @media (max-width: map-get($breakpoints, $breakpoint)){
- @content;
- }
- }
-}
+		@each $breakpoint, $value in $breakpoints {
+		@if $size == $breakpoint {
+		@media (max-width: map-get($breakpoints, $breakpoint)){
+			@content;
+			}
+		}
+	}
 }
 
 // EXAMPLE
