@@ -238,6 +238,78 @@ _style.scss</code></pre>
 </code></pre>
     </div>
 
+    <div id="extend" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <h2>@extend</h2>
+        <pre><code>.button-primary {
+    border-radius: 3px;
+    font-size: 13px;
+    color: #fff;
+    background: $blue;
+}
+.button-secondary {
+    border-radius: 3px;
+    font-size: 13px;
+    color: #555;
+    background: $light-grey;
+}</code></pre>
+    </div>
+
+    <div id="extend-a" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>.button {
+    border-radius: 3px;
+    font-size: 13px;
+}
+.button-primary {
+    @extend .button;
+    color: #fff;
+    background: $blue;
+}
+.button-secondary {
+    @extend .button;
+    color: #555;
+    background: $light-grey;
+}</code></pre>
+    </div>
+
+    <div id="extend-a-output" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>.button,
+.button-primary,
+.button-secondary {
+    border-radius: 3px;
+    font-size: 13px;
+}
+.button-primary {
+    color: #fff;
+    background: $blue;
+}
+.button-secondary {
+    color: #555;
+    background: $light-grey;
+}</code></pre>
+    </div>
+
+    <div id="extend-a-output" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>%button {
+    border-radius: 3px;
+    font-size: 13px;
+}</code></pre>
+    </div>
+
+    <div id="extend-a-output" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>.button-primary,
+.button-secondary {
+    border-radius: 3px;
+    font-size: 13px;
+}
+.button-primary {
+    color: #fff;
+    background: $blue;
+}
+.button-secondary {
+    color: #555;
+    background: $light-grey;
+}</code></pre>
+    </div>
 
     <!-- iFrame Demo -->
     <div id="iframe" class="step demo" data-x="1000" data-y="1300" data-rotate="60">
