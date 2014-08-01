@@ -79,6 +79,7 @@ $launchpad-red: #7e1a03;
         <ul>
             <li>Because we're lazy.</li>
             <li>Super lazy.</li>
+            <li>(DRY)</li>
         </ul>
     </div>
 
@@ -161,6 +162,22 @@ $launchpad-red: #7e1a03;
        </ul>
    </div>
 
+   <div id="import" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <h2>@import ALL THE THINGS</h2>
+        <pre><code>@import "mixins/mixins";
+@import "colors/colors";
+@import "normalize";
+@import "typography/typography";
+@import "icons/icons";
+@import "modules/elements/elements";
+@import "modules/fallback-message";
+@import "modules/hint";
+@import "modules/prism";
+@import "modules/stars/stars";
+@import "main";
+@import "_demos";</code></pre>
+   </div>
+
    <div id="folder-setup" class="step" data-x="000" data-y="1300" data-rotate="30">
         <h2>This folder setup rocks</h2>
         <pre><code>/buttons/
@@ -177,13 +194,49 @@ _style.scss</code></pre>
    </div>
 
    <div id="files-everywhere" class="step" data-x="000" data-y="1300" data-rotate="30">
-       <h2>Whoa. What?</h2>
+       <h2>Looks crazy, but...</h2>
        <ul>
-           <li>You will have a ton of files. This is good.</li>
-           <li>We promise.</li>
-           <li>Watch <a href="https://www.youtube.com/watch?v=EmNcD3b3ZtI">Clean out your Sass Junk Drawer</a> (Dale Sande).</li>
+           <li>it's maintainable,</li>
+           <li>reusable,</li>
+           <li>and readable.</li>
+           <li>Try it.</li>
        </ul>
    </div>
+
+    <div id="back-to-sass" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <h2>Back to Sass!</h2>
+    </div>
+
+    <div id="nesting" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <h2>Nesting!</h2>
+        <p>Tired of this?</p>
+        <pre><code>.class {}
+.class:before,
+.class:after{}
+.class:after{}
+.class .child-element{}
+.foo .class{}</code></pre>
+    </div>
+
+    <div id="nesting-input" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>.red {
+    color: red;
+
+    &.blue {
+        color: purple;
+    }
+}</code></pre>
+    </div>
+
+    <div id="nesting-output" class="step" data-x="000" data-y="1300" data-rotate="30">
+        <pre><code>.red {
+    color: red;
+}
+.red.blue {
+    color: purple;
+}
+</code></pre>
+    </div>
 
 
     <!-- iFrame Demo -->
