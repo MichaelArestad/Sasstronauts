@@ -7,8 +7,18 @@ body {
 	position:relative;
 	color: $white;
 	height: 100%;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 	overflow: hidden;
+
+	// For Screen
+	background: radial-gradient(ellipse at bottom, darken(#1b2735, 4%) 0%, #090a0f 100%);
+
+	// For TV
+	background: radial-gradient(ellipse at bottom, #090a0f 0%, lighten(#090a0f, 2%) 100%);
+
+	@media tv {
+		//background: radial-gradient(ellipse at bottom, #090a0f 0%, lighten(#090a0f, 2%) 100%);
+		//background: radial-gradient(ellipse at bottom, pink 0%, yellow 100%);
+	}
 }
 
 #impress {
@@ -31,7 +41,7 @@ body {
 
 // Slides
 .step {
-	min-width: 700px;
+	min-width: 900px;
 	opacity: .05;
 	transition: all 1.2s ease-in-out;
 
