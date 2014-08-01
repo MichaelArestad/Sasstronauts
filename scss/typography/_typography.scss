@@ -119,3 +119,27 @@ small {
 big {
 	font-size: 125%;
 }
+
+.files {
+	width: 50%;
+	margin: 0 auto;
+	padding: 2%;
+	background: #2B303B;
+	background: rgba(#2B303B, 0.8);
+	border-radius: 6px;
+
+		li {
+			font-size: 0.75em;
+
+		span {
+			position: relative;
+			top: 0.1em;
+			margin-right: 0.2em;
+			font-size: 1.25em;
+		}
+
+		> ul li {
+			text-indent:0.75em;
+		}
+	}
+}
