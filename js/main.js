@@ -5,7 +5,6 @@ function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
 
-
   // Code
   $('pre').css({'max-height': vph + 'px'});
 

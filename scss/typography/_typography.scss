@@ -120,6 +120,11 @@ big {
 	font-size: 125%;
 }
 
+
+
+
+// Slides
+
 .files {
 	width: 50%;
 	margin: 0 auto;
@@ -141,5 +146,19 @@ big {
 		> ul li {
 			text-indent:0.75em;
 		}
+	}
+}
+
+
+#followalong {
+	a {
+		font-size:1.25em;
+		display:block;
+	}
+
+	span {
+		font-size:0.8em;
+		margin-right:0.4em;
+		top:0.5em;
 	}
 }
