@@ -51,17 +51,43 @@
         <a href="http://sasstronauts.com/dvlpdnvr2014"><span class="genericon genericon-cog"></span>sasstronauts.com/dvlpdnvr2014</a>
     </div>
 
-    <div id="sass-overview" class="step" data-x="-4000" data-y="3000" data-z="-10000" data-scale="2" data-transition-duration="2000">
-     <h2>Overall Goal of SASS</h2>
-    	<ul>
-      <li>Multiple stylesheets without multiple server requests </li>
-    	 <li><a href="http://alistapart.com/article/why-sass" target="_blank">The SASS Elevator Pitch</a></li>
-    		 <ul>
-        <li>1. Variables </li>
-    		  <li>2. Reusable blocks of code</li>
-       </ul>
-      </ul>
-     </div>
+    <div id="sass" class="step" data-x="-4000" data-y="3000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <h2>Sass</h2>
+    </div>
+
+    <div id="variables" class="step" data-x="-4000" data-y="4000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <h2>Variables</h2>
+    </div>
+
+    <div id="variables-demo" class="step" data-x="-4000" data-y="5000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <pre class="left"><code>// Let's get dangerous.
+$darkwing-duck-purple: #582e76;
+$launchpad-red: #7e1a03;
+
+.duck {
+    background: $darkwing-duck-purple;
+}
+.mcquack {
+    background: $launchpad-red;
+}
+</code></pre>
+    </div>
+
+    <div id="reusable-code" class="step" data-x="-4000" data-y="6000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <h2>Repeatable code</h2>
+        <ul>
+            <li>Because we're lazy</li>
+        </ul>
+    </div>
+
+    <div id="reusable-code-demo" class="step" data-x="-4000" data-y="7000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <pre class="left"><code>// http://gradientsmotherfucker.com/
+@mixin gradients-motherfucker($top, $bottom){
+    background-color: $top;
+    background-image: linear-gradient(top, $top, $bottom);
+}
+</code></pre>
+    </div>
 
     <!-- Intoductions -->
     <div id="chris" class="step" data-x="-1000" data-y="-320" data-rotate-x="10">
