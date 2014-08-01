@@ -51,7 +51,12 @@ body {
 }
 
 .demo {
-	min-width: 1000px;
+	width:1920px;
+	height:1080px;
+
+	pre, iframe {
+		height:1080px;
+	}
 }
 
 .split {

@@ -10,7 +10,7 @@ pre[class*="language-"] {
 	color: #d08770;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
 	font-family: $monospace;
-	font-size: 24px;
+	font-size: 30px;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -33,7 +33,7 @@ pre[class*="language-"] {
 	//background: #000;
 	//background: rgba(0,0,0,0.3);
 	background: #2B303B;
-	background: rgba(#2B303B, 0.5);
+	background: rgba(#2B303B, 0.8);
 	box-shadow: 0 0 22px rgba(45, 97, 114, 0.1);
 }
 
