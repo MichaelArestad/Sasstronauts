@@ -30,8 +30,10 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #000;
-	background: rgba(0,0,0,0.3);
+	//background: #000;
+	//background: rgba(0,0,0,0.3);
+	background: #2B303B;
+	background: rgba(#2B303B, 0.5);
 	box-shadow: 0 0 22px rgba(45, 97, 114, 0.1);
 }
 
@@ -46,7 +48,7 @@ pre[class*="language-"] {
 }
 
 .token {
-	$white: #c0c5ce;
+	$white: white;//#c0c5ce;
 	$orange: #d08770;
 	$blue: #6097b6;
 	$magenta: #dd3786;
@@ -78,7 +80,7 @@ pre[class*="language-"] {
 	&.attr-name,
 	&.string,
 	&.builtin {
-		color: #d08770;
+		color: $orange;//#d08770;
 	}
 	&.operator,
 	&.entity,
@@ -86,7 +88,7 @@ pre[class*="language-"] {
 	.language-css &.string,
 	.style &.string,
 	&.variable {
-		color: #f8f8f2;
+		color: #BF616A;//#f8f8f2;
 	}
 	&.atrule,
 	&.attr-value {
