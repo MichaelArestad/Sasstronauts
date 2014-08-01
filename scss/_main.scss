@@ -50,6 +50,10 @@ body {
 	}
 }
 
+.image {
+	min-width: 750px;
+}
+
 .demo {
 	//width:1920px;
 	//height:1080px;
@@ -155,12 +159,12 @@ iframe {
 	height: 160px;
 	background: url(../_assets/gifs/nyan.gif) no-repeat;
 	background-size: 350px 160px;
-	animation: nyan 15s 300s linear;
+	animation: nyan 16s 300s linear;
 	transform: rotate(-14.04deg);
 }
 
 @keyframes nyan {
 	100% {
-		transform: translate(2000px, -500px) rotate(-14.04deg);
+		transform: translate(2500px, -500px) rotate(-14.04deg);
 	}
 }
