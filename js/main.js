@@ -9,9 +9,9 @@ function resizeDiv() {
   $('pre').css({'max-height': vph + 'px'});
 
   // Demos
-  $('.demo').css({'width': vpw + 'px'});
-  $('.demo').css({'height': vph + 'px'});
-  $('.demo pre').css({'height': vph + 'px'});
-  $('.demo iframe').css({'height': vph + 'px'});
+  $('.demo').css({'width': vpw - 20 + 'px'});
+  $('.demo').css({'height': vph - 20 + 'px'});
+  $('.demo pre').css({'height': vph - 20 + 'px'});
+  $('.demo iframe').css({'height': vph - 20 + 'px'});
 
 }
