@@ -158,16 +158,21 @@ $launchpad-red: #7e1a03;
 
     <!-- Command Line -->
     <div id="commandline" class="step image" data-x="-1000" data-y="3000" data-rotate="0">
-        <h3>Command Line</h3>
-        <img src="_assets/examples/commandline.png"/>
+        <h2>Command Line</h2>
+        <!--<img src="_assets/examples/commandline.png"/>-->
     </div>
 
 
 
 
-    <!-- Gif Here -->
+    <div id="commandline-gif" class="step image" data-x="-1000" data-y="3000" data-rotate="0">
+        <img src="_assets/gifs/cmdline.gif" width="100%"/>
+    </div>
 
 
+    <div id="commandline-ex" class="step image" data-x="-1000" data-y="3000" data-rotate="0">
+        <img src="_assets/examples/commandline.png"/>
+    </div>
 
 
     <div id="grunt" class="step" data-x="500" data-y="3000" data-z="1000" data-rotate="0">
@@ -253,6 +258,9 @@ $launchpad-red: #7e1a03;
        </ul>
    </div>
 
+    <div id="sass-gif" class="step image" data-x="000" data-y="4100" data-rotate="0">
+        <img src="_assets/gifs/sass.gif" width="100%"/>
+    </div>
 
 
     <div id="back-to-sass" class="step" data-x="000" data-y="1300" data-z="1000" data-rotate="30">
@@ -371,7 +379,7 @@ $launchpad-red: #7e1a03;
 
 
     <div id="mixins" class="step" data-x="2500" data-y="4500" data-z="0" data-rotate="0">
-        <h2>Mixins!</h2>
+        <h2>Mixins</h2>
     </div>
 
 
@@ -513,34 +521,24 @@ $mappy-map:(
 }</code></pre>
     </div>
 
-    <div id="nested-maps" class="step" data-x="2500" data-y="10000" data-z="-6000"data-rotate="0">
-        <h3>Nested Maps</h3>
-        <pre><code>$buttons:(
+
+<div id="maps-button" class="step demo" data-x="2500" data-y="11000" data-z="-3000" data-rotate="0">
+        <pre class="left"><code>// SCSS
+$buttons:(
   primary:(
     background: blue
   ),
   secondary:(
     background: green
   )
-);</code></pre>
-    </div>
-
-
-<div id="maps-button" class="step demo" data-x="2500" data-y="11000" data-z="-3000" data-rotate="0">
-        <pre class="left"><code>// SCSS
-@mixin button($background: blue) {
-  @extend %button;
-
-  background: $background;
-  border-color: darken($background, 5%);
-}
+);
 
 @each $type in map-keys($buttons) {
-    .button-#{$type} {
-      $button-color: map-get(map-get($buttons, $type), background);
+  .button-#{$type} {
+    $button-color: map-get(map-get($buttons, $type), background);
 
-        @include button($button-color);
-    }
+    @include button($button-color);
+  }
 }</code></pre>
 <pre class="right"><code>// CSS
 .button-primary, .button-secondary {
@@ -561,62 +559,79 @@ $mappy-map:(
 
 
 
+<div id="buttons" class="step" data-x="2500" data-y="12000" data-z="-3000" data-rotate="0">
+    <h3>Application</h3>
+</div>
 
 
+<div id="buttons-demo" class="step demo" data-x="2500" data-y="13000" data-z="-3000" data-rotate="0">
+        <pre class="left"><code>// SCSS
+// Color variables
+$darkwing-duck-purple: #582e76;
+$launchpad-red: #7e1a03;
 
-
-
-
-    <!-- iFrame Demo -->
-    <div id="iframe" class="step demo" data-x="1000" data-y="1300" data-rotate="0">
-        <h3>Demo</h3>
-        <iframe src="demos/demo1.html"></iframe>
-    </div>
-
-    <!-- iFrame Demo w/ Code -->
-    <div id="iframedemo" class="step demo split" data-x="3000" data-y="4300" data-rotate="0">
-        <pre class="left"><code>$buttons: (
- color: blue,
- height: 20px,
- width: 40px
-);
+// Placeholder selector for @extend
 %button {
- color: map-get($buttons, color);
- height: map-get($buttons, height);
- width: map-get($buttons, width);
+  border-radius: 3px;
+  font-size: 13px;
 }
-.foo {
- @extend %button;
+
+// Mixin
+@mixin button($background: blue) {
+  @extend %button;
+
+  background: $background;
+  border-color: darken($background, 5%);
+}
+
+// Map that sets options
+$buttons:(
+  primary:(
+    background: $darkwing-duck-purple,
+  ),
+  secondary:(
+    background: #eee,
+  )
+);
+
+// Loopy loop loop
+@each $type in map-keys($buttons) {
+    .button-#{$type} {
+      $button-color: map-get(map-get($buttons, $type), background);
+
+        @include button($button-color);
+    }
 }</code></pre>
-        <iframe class="right" src="demos/demo1.html"></iframe>
+<pre class="right"><code>// CSS
+.button-primary, .button-secondary {
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.button-primary {
+  background: #582e76;
+  border-color: #4a2764;
+}
+
+.button-secondary {
+  background: #eeeeee;
+  border-color: #e1e1e1;
+}</code></pre>
     </div>
 
-    <div id="test" class="step" data-x="-3000" data-y="4300" data-rotate="0">
-        <pre><code>.nyan { position:absolute; }
-.test {
-    top: 3px;
-    &amp; i {
-        background: $blue;
-    }
-}
-body {
-    color: #ff0000 !important;
-    background: red;
-}
-/* Test comment */
-@for $i from $start through $end {
-    some {
-        // Test comment
-        background: $i;
-    }
-}</code></pre>
-    </div>
 
-    <!-- Colophon -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
+
+<div id="demo-time" class="step" data-x="2500" data-y="13000" data-z="-6000" data-rotate="0">
+    <h2>Fuck yea, Demo Time</h2>
+</div>
+
+
+
+<div id="colophon" class="step" data-x="2500" data-y="13000" data-z="-10000" data-rotate="0">
+    <p>Michael Arestad <span><a href="http://twitter.com/michaelarestad">@michaelarestad</a></span></p>
+
+    <p>Chris Holder <span><a href="http://twitter.com/see8ch">@see8ch</a></span></p>
+</div>
 
 </div>
 
