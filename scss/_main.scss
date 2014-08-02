@@ -62,12 +62,10 @@ body {
 	min-width: 750px;
 }
 
-.demo {
-	//width:1920px;
-	//height:1080px;
-
-	pre, iframe {
-		//height:1080px;
+.demo.big {
+	//font-size:80%;
+	pre {
+		//font-size: 28px;
 	}
 }
 
@@ -96,6 +94,17 @@ body {
 
 .centered {
 	h2 { text-align: center; }
+}
+
+pre {
+	&.left,
+	&.right {
+		width: 49%;
+		float: left;
+	}
+	&.left {
+		margin-right: 2%;
+	}
 }
 
 #sasstronauts {
