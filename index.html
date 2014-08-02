@@ -494,7 +494,70 @@ $array:('grumpy', 'nyan', 'felix-the');
 
 
 
-map loops
+    <div id="maps-loop" class="step demo" data-x="2500" data-y="10000" data-z="-3000" data-rotate="0">
+        <pre class="left"><code>// SCSS
+$mappy-map:(
+  key: value,
+  another-key: another-value
+);
+
+.demo {
+  @each $key, $value in $mappy-map {
+      #{$key}: $value;
+  }
+}</code></pre>
+<pre class="right"><code>// CSS
+.demo {
+  key: value;
+  another-key: another-value;
+}</code></pre>
+    </div>
+
+    <div id="nested-maps" class="step" data-x="2500" data-y="10000" data-z="-6000"data-rotate="0">
+        <h3>Nested Maps</h3>
+        <pre><code>$buttons:(
+  primary:(
+    background: blue
+  ),
+  secondary:(
+    background: green
+  )
+);</code></pre>
+    </div>
+
+
+<div id="maps-button" class="step demo" data-x="2500" data-y="11000" data-z="-3000" data-rotate="0">
+        <pre class="left"><code>// SCSS
+@mixin button($background: blue) {
+  @extend %button;
+
+  background: $background;
+  border-color: darken($background, 5%);
+}
+
+@each $type in map-keys($buttons) {
+    .button-#{$type} {
+      $button-color: map-get(map-get($buttons, $type), background);
+
+        @include button($button-color);
+    }
+}</code></pre>
+<pre class="right"><code>// CSS
+.button-primary, .button-secondary {
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.button-primary {
+  background: blue;
+  border-color: #0000e6;
+}
+
+.button-secondary {
+  background: green;
+  border-color: #006700;
+}</code></pre>
+    </div>
 
 
 
