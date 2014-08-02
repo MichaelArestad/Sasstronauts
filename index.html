@@ -46,7 +46,22 @@
         <a href="http://sasstronauts.com"><span class="genericon genericon-cog"></span>sasstronauts.com</a>
     </div>
 
-    <div id="sass" class="step" data-x="-4000" data-y="3000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <!-- Intoductions -->
+    <div id="chris" class="step" data-x="-1000" data-y="-320" data-rotate-x="10">
+        <h2>Chris Holder</h2>
+        <a href="https://twitter.com/see8ch"><span class="genericon genericon-twitter"></span>@see8ch</a>
+        <!--<a href="http://github.com/see8ch"><span class="genericon genericon-github"></span>github.com/see8ch</a>
+        <a href="http://codepen.io/see8ch"><span class="genericon genericon-codepen"></span>codepen.io/see8ch</a>-->
+    </div>
+
+    <div id="michael" class="step" data-x="-1000" data-y="320" data-rotate-x="-10">
+        <h2>Michael Arestad</h2>
+        <a href="https://twitter.com/michaelarestad"><span class="genericon genericon-twitter"></span>@michaelarestad</a>
+        <!--<a href="http://github.com/michaelarestad"><span class="genericon genericon-github"></span>github.com/michaelarestad</a>
+        <a href="http://codepen.io/michaelarestad"><span class="genericon genericon-codepen"></span>codepen.io/michaelarestad</a>-->
+    </div>
+
+    <div id="sass" class="step" data-x="-4000" data-y="3000" data-z="-2000" data-scale="2" data-transition-duration="2000">
         <h1>Sass</h1>
         <ul><li>Syntactically Awesome Style Sheets</li></ul>
     </div>
@@ -55,11 +70,11 @@
         <img src="_assets/gifs/what.gif" width="100%">
     </div>
 
-    <div id="variables" class="step" data-x="-4000" data-y="4000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <div id="variables" class="step" data-x="-4000" data-y="4500" data-z="-10000" data-scale="2" data-transition-duration="2000">
         <h2>Variables</h2>
     </div>
 
-    <div id="variables-demo" class="step" data-x="-4000" data-y="5000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <div id="variables-demo" class="step" data-x="-4000" data-y="6000" data-z="-10000" data-scale="2" data-transition-duration="2000">
         <pre class="left"><code>// Let's get dangerous.
 $darkwing-duck-purple: #582e76;
 $launchpad-red: #7e1a03;
@@ -73,11 +88,11 @@ $launchpad-red: #7e1a03;
 </code></pre>
     </div>
 
-    <div id="darkwing" class="step" data-x="-4000" data-y="5000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <div id="darkwing" class="step" data-x="-4000" data-y="6000" data-z="-10000" data-scale="2" data-transition-duration="2000">
         <img src="_assets/gifs/darkwing.gif" width="100%">
     </div>
 
-    <div id="reusable-code" class="step" data-x="-4000" data-y="6000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <div id="reusable-code" class="step" data-x="-4000" data-y="7000" data-z="-8000" data-scale="2" data-transition-duration="2000">
         <h2>Repeatable code</h2>
         <ul>
             <li>Because we're lazy.</li>
@@ -86,7 +101,7 @@ $launchpad-red: #7e1a03;
         </ul>
     </div>
 
-    <div id="reusable-code-demo" class="step" data-x="-4000" data-y="7000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+    <div id="reusable-code-demo" class="step" data-x="-4000" data-y="7000" data-z="-8000" data-scale="2" data-transition-duration="2000">
         <pre class="left"><code>// SCSS (http://gradientsmotherfucker.com/)
 @mixin gradients-motherfucker($top, $bottom){
     background-color: $top;
@@ -104,28 +119,15 @@ $launchpad-red: #7e1a03;
 }</code></pre>
     </div>
 
-    <!-- Intoductions -->
-    <div id="chris" class="step" data-x="-1000" data-y="-320" data-rotate-x="10">
-        <h2>Chris Holder</h2>
-        <a href="https://twitter.com/see8ch"><span class="genericon genericon-twitter"></span>@see8ch</a>
-        <a href="http://github.com/see8ch"><span class="genericon genericon-github"></span>github.com/see8ch</a>
-        <a href="http://codepen.io/see8ch"><span class="genericon genericon-codepen"></span>codepen.io/see8ch</a>
-    </div>
-
-    <div id="michael" class="step" data-x="-1000" data-y="320" data-rotate-x="-10">
-        <h2>Michael Arestad</h2>
-        <a href="https://twitter.com/michaelarestad"><span class="genericon genericon-twitter"></span>@michaelarestad</a>
-        <a href="http://github.com/michaelarestad"><span class="genericon genericon-github"></span>github.com/michaelarestad</a>
-        <a href="http://codepen.io/michaelarestad"><span class="genericon genericon-codepen"></span>codepen.io/michaelarestad</a>
-    </div>
-
 
     <!-- The Setup -->
     <div id="setup" class="step" data-x="-1000" data-y="2300" data-rotate="0">
-        <h2>Using Sass</h2>
+        <h2>Sass Compiling</h2>
         <ul>
-            <li>Grunt</li>
-            <li>Autoprefixer</li>
+            <li><a href="http://gruntjs.com">Grunt</a></li>
+            <li><a href="https://incident57.com/codekit/">CodeKit</a></li>
+            <li><a href="http://gulpjs.com/">Gulp</a></li>
+            <li><a href="http://codepen.io">CodePen</a></li>
         </ul>
     </div>
 
@@ -135,8 +137,10 @@ $launchpad-red: #7e1a03;
         <img src="_assets/examples/commandline.png"/>
     </div>
 
+    <!-- Gif Here -->
 
-    <div id="grunt" class="step" data-x="-1000" data-y="3700" data-rotate="60">
+
+    <div id="grunt" class="step" data-x="500" data-y="3000" data-z="1000" data-rotate="0">
         <h2>Grunt</h2>
         <ul>
             <li><a href="http://sass-lang.com/">Install Sass</a></li>
@@ -146,22 +150,22 @@ $launchpad-red: #7e1a03;
         </ul>
     </div>
 
-    <div id="grunt-example" class="step image" data-x="-1000" data-y="4300" data-rotate="60">
+    <div id="grunt-example" class="step image" data-x="500" data-y="4300" data-z="1000" data-rotate="0">
         <h3>Gruntfile.js</h3>
         <img src="_assets/examples/grunt.jpg"/>
     </div>
 
-    <div id="alternativess" class="step" data-x="-1000" data-y="2300">
+<!--    <div id="alternativess" class="step" data-x="-1000" data-y="2300">
         <h2>alternatives</h2>
         <ul>
             <li><a href="https://incident57.com/codekit/">CodeKit</a></li>
             <li><a href="http://gulpjs.com/">Gulp</a></li>
             <li><a href="http://codepen.io">CodePen</a></li>
         </ul>
-    </div>
+    </div>-->
 
    <!-- The Basics -->
-   <div id="fun" class="step" data-x="0000" data-y="1300" data-rotate="30">
+   <div id="fun" class="step" data-x="500" data-y="4300" data-z="2000" data-rotate="0">
        <h2>Fun time!</h2>
    </div>
 
@@ -174,24 +178,8 @@ $launchpad-red: #7e1a03;
        </ul>
    </div>
 
-   <div id="import" class="step" data-x="000" data-y="2700" data-rotate="0">
-        <h2>@import ALL THE THINGS</h2>
-        <pre><code>@import "mixins/mixins";
-@import "colors/colors";
-@import "normalize";
-@import "typography/typography";
-@import "icons/icons";
-@import "modules/elements/elements";
-@import "modules/fallback-message";
-@import "modules/hint";
-@import "modules/prism";
-@import "modules/stars/stars";
-@import "main";
-@import "_demos";</code></pre>
-   </div>
-
-   <div id="folder-setup" class="step centered" data-x="000" data-y="3400" data-rotate="0">
-        <h2>This folder setup rocks</h2>
+    <div id="folder-setup" class="step centered" data-x="000" data-y="2700" data-rotate="0">
+        <h3>This folder setup rocks</h3>
         <ul class="files">
             <li>
                 <span class="genericon genericon-category"></span>buttons
@@ -211,12 +199,30 @@ $launchpad-red: #7e1a03;
         </ul>
    </div>
 
+   <div id="import" class="step" data-x="000" data-y="3400" data-rotate="0">
+        <h3>@import ALL THE THINGS</h3>
+        <pre><code>@import "mixins/mixins";
+@import "colors/colors";
+@import "normalize";
+@import "typography/typography";
+@import "icons/icons";
+@import "modules/elements/elements";
+@import "modules/fallback-message";
+@import "modules/hint";
+@import "modules/prism";
+@import "modules/stars/stars";
+@import "main";
+@import "_demos";</code></pre>
+   </div>
+
+
+
    <div id="files-everywhere" class="step" data-x="000" data-y="4100" data-rotate="0">
-       <h2>Looks crazy, but...</h2>
+       <h3>Looks crazy, but it's...</h3>
        <ul>
-           <li>it's maintainable,</li>
-           <li>reusable,</li>
-           <li>and readable.</li>
+           <li>Maintainable</li>
+           <li>Reusable</li>
+           <li>Readable</li>
            <li>Try it.</li>
        </ul>
    </div>
@@ -225,13 +231,14 @@ $launchpad-red: #7e1a03;
         <h2>Back to Sass!</h2>
     </div>
 
-    <div id="nesting" class="step" data-x="000" data-y="1300" data-rotate="30">
+    <div id="nesting" class="step" data-x="000" data-y="1300" data-z="-1000" data-rotate="30">
         <h2>Nesting!</h2>
         <p>Tired of this?</p>
         <pre><code>.class {}
 .class:before,
 .class:after{}
-.class:after{}
+.class:hover{}
+.class:hover:after {}
 .class .child-element{}
 .foo .class{}</code></pre>
     </div>
@@ -378,6 +385,7 @@ body {
 }</code></pre>
     </div>
 
+    <!-- Colophon -->
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
         <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
         <span class="footnote">* beat that, prezi ;)</span>
