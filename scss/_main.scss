@@ -45,8 +45,15 @@ body {
 	opacity: .015;
 	transition: all 1.2s ease-in-out;
 
+	img {
+		opacity: 0;
+	}
 	&.active {
 		opacity: 1;
+
+		img {
+			opacity 1;
+		}
 	}
 }
 
