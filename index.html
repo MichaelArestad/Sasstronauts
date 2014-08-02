@@ -19,11 +19,6 @@
 
 <body class="impress-not-supported language-scss">
 
-<div class="fallback-message" style="display: none;">
-    <p>Wah wah. Your browser <b>doesn't support the amazeballz features required</b> so you are get with a <del>simplified</del> boring version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
-
 <div id="impress">
 
     <div id="sasstronauts" class="step" data-x="-6000" data-y="0" data-z="-10000" data-scale="2" data-transition-duration="2000">
@@ -51,9 +46,13 @@
         <a href="http://sasstronauts.com"><span class="genericon genericon-cog"></span>sasstronauts.com</a>
     </div>
 
-    <div id="sass" class="step" data-x="-4000" data-y="3000" data-z="-10000" data-scale="2" data-transition-duration="2000">
-        <h2>Sass</h2>
+    <div id="sass" class="step" data-x="-4000" data-y="2000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <h1>Sass</h1>
         <ul><li>Syntactically Awesome Style Sheets</li></ul>
+    </div>
+
+    <div id="what" class="step" data-x="-4000" data-y="3000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <img src="_assets/gifs/what.gif" width="100%">
     </div>
 
     <div id="variables" class="step" data-x="-4000" data-y="4000" data-z="-10000" data-scale="2" data-transition-duration="2000">
@@ -74,6 +73,10 @@ $launchpad-red: #7e1a03;
 </code></pre>
     </div>
 
+    <div id="darkwing" class="step" data-x="-4000" data-y="5000" data-z="-10000" data-scale="2" data-transition-duration="2000">
+        <img src="_assets/gifs/darkwing.gif" width="100%">
+    </div>
+
     <div id="reusable-code" class="step" data-x="-4000" data-y="6000" data-z="-10000" data-scale="2" data-transition-duration="2000">
         <h2>Repeatable code</h2>
         <ul>
@@ -84,12 +87,21 @@ $launchpad-red: #7e1a03;
     </div>
 
     <div id="reusable-code-demo" class="step" data-x="-4000" data-y="7000" data-z="-10000" data-scale="2" data-transition-duration="2000">
-        <pre class="left"><code>// http://gradientsmotherfucker.com/
+        <pre class="left"><code>// SCSS (http://gradientsmotherfucker.com/)
 @mixin gradients-motherfucker($top, $bottom){
     background-color: $top;
     background-image: linear-gradient(top, $top, $bottom);
 }
+
+.foo {
+    @include gradients-motherfucker(red, blue);
+}
 </code></pre>
+        <pre class="left"><code>// CSS
+.foo {
+    background-color: red;
+    background-image: linear-gradient(top, red, blue);
+}</code></pre>
     </div>
 
     <!-- Intoductions -->
@@ -369,9 +381,6 @@ body {
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
         <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
         <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
 
 </div>
