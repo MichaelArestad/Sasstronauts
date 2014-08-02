@@ -33,7 +33,7 @@ body {
 	z-index:9999;
 	transition: all 333ms ease-in-out;
 	span {
-		font-size:em(30);
+		font-size:0.8em;
 		color:$white;
 	}
 	&:hover {opacity:1;}
@@ -60,13 +60,6 @@ body {
 
 .image {
 	min-width: 750px;
-}
-
-.demo.big {
-	//font-size:80%;
-	pre {
-		//font-size: 28px;
-	}
 }
 
 .split {
