@@ -4,9 +4,7 @@
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
  */
-
-code[class*="language-"],
-pre[class*="language-"] {
+%code {
 	color: #ff6d3f;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
 	font-family: $monospace;
@@ -18,6 +16,12 @@ pre[class*="language-"] {
 	word-break: normal;
 	tab-size: 4;
 	hyphens: none;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+	@extend %code;
+	font-size: 35px;
 
 	@media (max-width: 1280px) {
 		font-size: 20px;
@@ -43,8 +47,13 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
+	padding: .1em .6em;
+	border-radius: 6px;
+	font-size: 55px;
+
+	@media (max-width: 1280px) {
+		font-size: 40px;
+	}
 }
 
 .namespace {
