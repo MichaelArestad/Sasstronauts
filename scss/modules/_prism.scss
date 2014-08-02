@@ -18,6 +18,10 @@ pre[class*="language-"] {
 	word-break: normal;
 	tab-size: 4;
 	hyphens: none;
+
+	@media (max-width: 1280px) {
+		font-size: 20px;
+	}
 }
 
 /* Code blocks */

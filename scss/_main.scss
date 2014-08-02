@@ -33,7 +33,7 @@ body {
 	z-index:9999;
 	transition: all 333ms ease-in-out;
 	span {
-		font-size:0.8em;
+		font-size:em(30);
 		color:$white;
 	}
 	&:hover {opacity:1;}
