@@ -17,6 +17,10 @@ textarea {
 	font-size: map-get($root-font, font-size) * 1px;
 	font-weight: map-get($root-font, font-weight);
 	line-height: map-get($root-font, line-height);
+
+	@media (max-width: 1280px) {
+		font-size: 40px;
+	}
 }
 
 h1,
@@ -166,4 +170,3 @@ big {
 		top:0.5em;
 	}
 }
-
